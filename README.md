@@ -1,10 +1,53 @@
-## CrossUI-ClassicLayout
-Web app url : https://jokerttv0.github.io/CrossUI-ClassicLayout
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta name="keywords" content="ui,gui,prototyping,designer,builder,rad,ria,spa,no-code,codeless,without coding,programming,development,drag and drop,web application,build app,create app,make app" />
+        <meta name="description" content="Powered by CrossUI No-Code App Builder - Create Interactive App Without Coding" />
+        <meta name="copyright" content="copyright@crossui.com" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta http-equiv="imagetoolbar" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,
+width=device-width, height=device-height" />
+        <meta http-equiv="no-cache">
+        <meta http-equiv="pragma" content="no-cache"  />
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="content-type" content="no-cache, must-revalidate" />
+        <meta http-equiv="expires" content="-1"/>
+        <!--link rel="stylesheet" type="text/css" href="CSS/default.css" /-->
+        <title>Powered by CrossUI No-Code App Builder</title>
+</head>
+<body>
+      <div id="loading" style="position:fixed;width:100%;text-align:center;">
+          <img id="loadingimg" alt="Loading..." title="Loading..." src="//www.crossui.com/libs/2.0/loading.gif" />
+      </div>
+</body>
+</html>
 
-This project was created by CrossUI No-Code App Builder: https://crossui.com/RADGithub
-
-Based on template: https://linb.github.io/CrossUI_Assets/assets/projects/Simple/xui_project_tpl_ClassicLayout
-
-Click [here](https://crossui.com/RADGithub/#!from=github&owner=jokerttv0&repo=CrossUI-ClassicLayout) to edit this web app in CrossUI No-Code App Builder
-
-<i>Powered by [CrossUI](https://crossui.com)</i>
+<script type="text/javascript">
+    if(/#.*touch\=(1|true)/.test(location.href)){
+        window.xui_ini={fakeTouch:1};
+        document.body.className +=" xui-cursor-touch";
+    }
+</script>
+<script type="text/javascript" src="//www.crossui.com/libs/2.0/js/xui-debug.js"></script>
+<script type="text/javascript" src="xuiconf.js"></script>
+<script type="text/javascript">
+    var args = xui.getUrlParams(),
+          onEnd = function(){xui('loading').remove();};
+    if(args&&args.ficdn){
+      xui.ini.$FontIconsCDN=args.ficdn;
+    }
+    if(args&&args.cls){
+        xui.launch(args.cls, onEnd, args && args.lang||'', args && args.theme||'default');
+        document.title += " [" + args.cls + "]";
+    }else{
+        xui.launch('App/js/index.js', onEnd, args && args.lang||'', args && args.theme||'default');
+    }
+    /*
+    window.onerror = function(sMsg,sUrl,sLine){
+        alert('>>' + sMsg+' at File: '+ sUrl + ' ( line ' + sLine + ' ).');
+    }
+    */
+</script>
